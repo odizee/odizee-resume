@@ -2,7 +2,9 @@ html {
         box-sizing: border-box;
         font-size: 62.5%;
         max-width: 1000px;
-        margin: auto;    
+        margin: auto; 
+        padding: 2rem;
+           
     
     }
 
@@ -15,6 +17,8 @@ body {
          margin: 0;
          font-size: 1.5rem;
          background-color: #B6D6E2;
+         box-shadow:  2px -2px 15px #b3c2c5,
+             -20px 20px 60px #7a9bb836;
 
     }
 

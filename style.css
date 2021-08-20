@@ -1,7 +1,7 @@
 html {
         box-sizing: border-box;
         font-size: 62.5%;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto; 
         padding: 2rem;
            
@@ -9,14 +9,14 @@ html {
     }
 
      *, *:before, *:after {
-         box-sizing: inherit;
+         box-sizing: border-box;
      }
 
 body {
-         padding: 0;
+         padding: 0rem;
          margin: 0;
          font-size: 1.5rem;
-         background-color: #B6D6E2;
+         /* background-color: #f6f9fc; */
          box-shadow:  2px -2px 15px #b3c2c5,
              -20px 20px 60px #7a9bb836;
 
@@ -26,8 +26,22 @@ h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
 p, a, li {
     font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+
 }
 
 ul {
@@ -35,9 +49,19 @@ ul {
     list-style-type: none;
 }
 
+
 .intro-section {
     display: flex;
-    background-color: #C6D9DF;
+background: hsla(283, 36%, 50%, 1);
+
+background: hsla(283, 36%, 50%, 1);
+
+background: linear-gradient(45deg, hsla(283, 36%, 50%, 0.6) 30%, rgba(252, 188, 151, 0.576) 100%);
+
+background: -moz-linear-gradient(45deg, hsla(283, 36%, 50%, 0.6) 30%, hsla(22, 94%, 79%, 1) 100%);
+
+background: -webkit-linear-gradient(45deg, #9352ad60 30%, rgba(252, 188, 151, 0.426) 100%);
+   
     justify-content: space-around;
     align-items: center;
     padding: 5rem 3rem;
@@ -90,17 +114,20 @@ ul {
 
 .contact-item > a{
     font-weight: 500;
-    font-size: 1.5rem;
     color: #003D74;
     text-decoration: none;
 }
 
-
+.detail-section-wrapper {
+	 display: flex;
+}
+ 
 .detail-section {
     background-color: #fff;
     display: flex;
     justify-content: space-around;
     padding: 2.5rem 2.5rem;
+    z-index: -2;
 }
 
 .detail-left {
@@ -117,8 +144,66 @@ ul {
 .detail-left > section > h2, 
 .detail-right > section > h2 {
     font-weight: bold;
-    font-size: 2.5rem;
-    color: #003D74;
+    border-radius: 8px;
+	background: #9251ac;
+	flex-basis: 40%;
+	padding: 2rem;
+    color: #f6a4ec;
+	 font-weight: 600;
+}
+
+
+ ul {
+  list-style-type: none;
+}
+
+li {
+  position: relative;
+  margin: 0;
+  padding-bottom: 1em;
+  padding-left: 20px;
+}
+li:after {
+	 content: "";
+	 width: 2px;
+	 height: 102%;
+	 background: #9251ac;
+	 position: absolute;
+	 top: 65%;
+	 left: -2.1rem;
+	 z-index: -1;
+}
+ li:before {
+	 content: "";
+	 width: 2rem;
+	 height: 2rem;
+	 position: absolute;
+	 background: #f6a4ec;
+	 border-radius: 100%;
+	 left: -3rem;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 border: 2px solid #9251ac;
+}
+
+li {
+	 background: #fff;
+	 margin-bottom: 2rem;
+	 position: relative;
+	 display: flex;
+	 margin: 2rem 0;
+     padding: 2.5rem 2rem;
+	 border-radius: 8px;
+	 box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+li:last-child:after {
+	 content: none;
+}
+
+.experience > ul > li:after {
+	 top: 58%;
+	 left: -2.1rem;
 }
 
 .hard-skills ul > li,
@@ -129,7 +214,6 @@ ul {
 .detail-right-h3 {
     font-family: 'Raleway';
     font-weight: bold;
-    font-size: 1.5rem;
     letter-spacing: -0.02em;
     color: #003e74b1;
 
@@ -139,12 +223,13 @@ ul {
     flex-basis: 40%;
 }
 
+
 .logo > a > img {
     width: 12rem;
     height: 5rem;
     object-fit: contain;
     margin-right: 1rem;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     background: #e4dfdf;
     box-shadow:  2px -2px 15px #bebebe,
              -20px 20px 60px #ffffff;
@@ -162,7 +247,8 @@ ul {
 
 @media (max-width: 56.25em){
     html {
-        font-size: 50%;
+        font-size: 65%;
+
     }
 
     .image > img {
@@ -175,12 +261,19 @@ ul {
 
 }
 
-@media (max-width: 25.43em) {
+@media (max-width: 43.0625em) {
 
     html {
-        font-size: 31.25%; 
+        font-size: 50.25%; 
     }
 
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
     .intro-section {
         flex-direction: column;
         text-align: center;
@@ -194,4 +287,22 @@ ul {
     .contact {
         justify-content: center;
     }
-}
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-section {   
+        padding: 5rem 5rem;
+        flex-direction: column;
+    }
+} 
+
+
+
+/* ************************************************************ */
+
+ 
+ 
